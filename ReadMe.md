@@ -30,10 +30,11 @@
   - 인터벌을 1로 입력했다면 위와 같은 결과가 출력됩니다(인터벌 * 30번째 프레임 저장)
   - 동영상은 다운받아 프레임을 저장한다음 삭제됩니다.
 
-## Develop enviornment
+#### Develop enviornment
 - Window10
 - Visual studio code
 - Python2.7.2 (Python3.6.4)
 - Module : cv2 , os , pytube
 
--from https://wondy1128.tistory.com/148
+#### Ref
+- https://wondy1128.tistory.com/148
