@@ -1,4 +1,5 @@
 #-*- encoding:utf-8 -*-
+import sys
 from pytube import YouTube
 import cv2
 import os
@@ -34,9 +35,9 @@ def toFrames(vid_path, vid_name, seconds):
             print ('Creating...' + name)
             cv2.imwrite(name, frame)
 
-        currentFrame += 30
+        currentFrame += 1
     cap.release()
 
 vidname, split_second = vidGetter(os.getcwd())
-toFrames(os.getcwd() + "/" + vidname + ".mp4", vidname + ".mp4", split_second)
-os.remove(os.getcwd() + "/" + vidname + ".mp4")
+toFrames(os.getcwd() + "\\" + vidname + ".mp4", vidname + ".mp4", split_second)
+os.remove(os.getcwd() + "\\" + vidname + ".mp4")

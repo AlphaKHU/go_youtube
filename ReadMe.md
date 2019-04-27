@@ -1,4 +1,4 @@
-# Youtube URL to frame images
+﻿# Youtube URL to frame images
 
 ## How to use(EN)
 - Enter youtube URL to download
@@ -35,6 +35,14 @@
 
   - 인터벌을 1로 입력했다면 위와 같은 결과가 출력됩니다(인터벌 * 30번째 프레임 저장)
   - 동영상은 다운받아 프레임을 저장한다음 삭제됩니다.
+
+
+##### 문제점
+- 동영상의 원래제목에 ' . ' 이 포함된경우 파일을 찾을 수 없다고 함
+- 특정 URL에 대해 패턴 오류가 나는 경우가 있음. 이때는 pytube의 extract.py파일의 120번째줄을 아래와 같이 주석처리 해주면 됨
+  '''python
+  120 	#    r'\W[\'"]?t[\'"]?: ?[\'"](.+?)[\'"]', watch_html,
+  '''
 
 ## Develop enviornment
 - Window10
