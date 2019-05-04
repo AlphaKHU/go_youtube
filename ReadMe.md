@@ -39,6 +39,10 @@
    ```python
   120 	#    r'\W[\'"]?t[\'"]?: ?[\'"](.+?)[\'"]', watch_html,
   ```
+- 그럼에도 오류가 나는경우, pytube 모듈을 업데이트해줘야 함. 터미널에 아래와 같이 입력해준다
+   ```python
+  pip install git+https://github.com/nficano/pytube.git
+  ```
 
 ## Develop enviornment
 =======
