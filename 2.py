@@ -4,12 +4,8 @@ from pytube import YouTube
 import cv2
 import os
 
-def vidGetter(save_path): #video downloader
-    tubeURL = input("Enter url to get video : ")
-    second = (int)(input("How long interval do you want(second)? : "))
-    yt = YouTube(tubeURL)    
- 
-    print(yt.title)
+def vidGetter(save_path, url, second): #video downloader
+    yt = YouTube(url)
     yt.streams.first().download(save_path)
     return yt.title, second
 
@@ -40,6 +36,10 @@ def toFrames(vid_path, vid_name, seconds):
         currentFrame += 1
     cap.release()
 
-vidname, split_second = vidGetter(os.getcwd())
+
+url = input("Enter url to get video : ")
+second = (int)(input("How long interval do you want(second)? : "))
+
+vidname, split_second = vidGetter(os.getcwd(), url, second)
 toFrames(os.getcwd() + "\\" + vidname + ".mp4", vidname + ".mp4", split_second)
 os.remove(os.getcwd() + "\\" + vidname + ".mp4")
